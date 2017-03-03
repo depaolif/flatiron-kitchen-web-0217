@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @recipe.name %><br><br>
+  Ingredients:<br>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <p><%= ingredient.name %></p>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
